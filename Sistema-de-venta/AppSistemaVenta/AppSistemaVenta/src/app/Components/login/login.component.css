@@ -1,0 +1,32 @@
+
+.body{
+
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1552585907-521c3dac511c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}
+
+.loginCard{
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  margin:2em auto;
+  text-align:center;
+  max-height: 600px;
+}
+.header{
+  text-align: center;
+
+}
+
+.full-width{
+
+  width:80%
+}
+

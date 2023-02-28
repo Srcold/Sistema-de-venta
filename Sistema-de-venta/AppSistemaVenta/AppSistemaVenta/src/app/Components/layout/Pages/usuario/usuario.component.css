@@ -1,0 +1,32 @@
+table{
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+.mat-form-field{
+    font-size: 14px;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .mat-column-optional {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mat-row {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .mat-cell, .mat-header-cell {
+    display: block;
+    text-align: center;
+  }
+}
