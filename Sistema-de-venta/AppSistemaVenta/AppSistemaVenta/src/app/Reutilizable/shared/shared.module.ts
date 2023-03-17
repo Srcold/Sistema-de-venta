@@ -29,9 +29,6 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
-
 
 @NgModule({
   declarations: [],
@@ -63,8 +60,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MomentDateModule,
-    MatSlideToggleModule
+    MomentDateModule
   ],
   providers:[
     MatDatepickerModule,

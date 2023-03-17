@@ -18,6 +18,7 @@ import { Observable } from 'rxjs';
 })
 export class LayoutComponent implements OnInit {
 
+
   listaMenus:Menu[] = [];
   correoUsuario:string = '';
   rolUsuario:string = '';
@@ -42,6 +43,7 @@ export class LayoutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
 
     const usuario = this._utilidadServicio.obtenerSesionUsuario();
 
@@ -94,5 +96,8 @@ export class LayoutComponent implements OnInit {
 
 
   }
+
+
+
 
 }

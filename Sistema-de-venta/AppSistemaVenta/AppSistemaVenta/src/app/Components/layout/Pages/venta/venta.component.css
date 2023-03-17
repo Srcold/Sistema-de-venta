@@ -1,7 +1,18 @@
-.full-width{
-  width: 100%;
+
+mat-card-content{
+  display: flex;
+  flex-flow: row wrap;
 }
 
-table{
+
+.full-width{
+  background-color: aqua;
+}
+
+
+
+
+
+.mat-elevation-z2{
   width: 100%;
 }

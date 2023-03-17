@@ -1,7 +1,22 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-      <h1>Sistema Venta </h1>
-<!-- <mat-slide-toggle (change)="toggleDarkMode()">Dark Mode</mat-slide-toggle> -->
+
+
 
 
       <button mat-icon-button (click)="sidenav.toggle();">
@@ -9,7 +24,7 @@
       </button>
 
       <span style="flex: 1 1 auto;"></span>
-      <label style="font-size: 14px; margin-right: 20px;">
+      <label  style="font-size: 14px; margin-right: 20px;" >
           {{correoUsuario}} | {{rolUsuario}}
       </label>
       <button mat-icon-button (click)="cerrarSesion()">
@@ -29,7 +44,7 @@
 
           <mat-list-item *ngFor="let menu of listaMenus"   [routerLink]="menu.url">
               <mat-icon mat-list-icon>{{menu.icono}}</mat-icon>
-              <div mat-line>{{menu.nombre}}</div>
+              <div mat-line >{{menu.nombre}}</div>
           </mat-list-item>
 
 
@@ -46,3 +61,8 @@
 
 </mat-sidenav-container>
 <mat-toolbar color="primary" > <span style="flex: 1 1 auto;"></span><h4 > Desarrollado Por martin zambruno</h4></mat-toolbar>
+
+
+
+
+

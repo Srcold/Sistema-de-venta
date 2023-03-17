@@ -15,6 +15,7 @@ import { ModalDetalleVentaComponent } from './Modales/modal-detalle-venta/modal-
 
 
 
+
 @NgModule({
   declarations: [
     DashBoardComponent,
@@ -25,12 +26,16 @@ import { ModalDetalleVentaComponent } from './Modales/modal-detalle-venta/modal-
     ReporteComponent,
     ModalUsuarioComponent,
     ModalProductoComponent,
-    ModalDetalleVentaComponent
+    ModalDetalleVentaComponent,
+
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
     SharedModule,
+
+
+
 
 
   ]
