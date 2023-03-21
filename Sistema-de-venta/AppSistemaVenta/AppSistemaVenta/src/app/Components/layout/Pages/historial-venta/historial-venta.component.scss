@@ -1,0 +1,54 @@
+/* .card-container{
+  display: flex;
+  flex-direction: column;
+} */
+.campos-formulario{
+  display: flex;
+
+
+
+
+}
+
+.boton-buscar{
+  margin-top: 15px;
+  width: 10%;
+  height: 10%;
+
+
+
+
+}
+
+mat-form-field{
+  margin-right: 10px;
+}
+
+table{
+  width: 100%;
+  min-width: 900px;
+}
+
+.input-filter{
+  width: 100%;
+  font-size: 14px;
+}
+
+.tabla-containter{
+  width: 100% !important;
+  overflow: scroll;
+}
+
+
+
+
+@media screen and (max-width: 860px){
+  .campos-formulario{
+    flex-direction: column;
+    width: 100% !important;
+    margin-bottom:15px;
+
+  }
+}
+
+

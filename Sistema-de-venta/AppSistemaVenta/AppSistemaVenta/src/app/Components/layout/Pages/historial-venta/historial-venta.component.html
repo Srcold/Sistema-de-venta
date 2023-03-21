@@ -2,7 +2,7 @@
 
 <mat-card style="margin:20px 40px 40px 40px">
 
-    <mat-card-content>
+    <mat-card-content class="card-container">
 
         <form [formGroup]="formularioBusqueda"  (ngSubmit)="buscarVentas()">
 
@@ -41,7 +41,7 @@
                     type="submit"
                     class="boton-buscar"
                     >
-                        <mat-icon>search</mat-icon> Buscar
+                        <mat-icon>search</mat-icon>
                 </button>
             </div>
         </form>
@@ -54,7 +54,7 @@
             <input matInput (keyup)="aplicarFiltroTabla($event)" #input>
         </mat-form-field>
 
-        <div class="mat-elevation-z2">
+        <div class="tabla-containter">
 
             <table mat-table [dataSource]="datosListaVenta">
 

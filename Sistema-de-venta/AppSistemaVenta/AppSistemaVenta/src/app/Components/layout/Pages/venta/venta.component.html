@@ -1,50 +1,56 @@
-<h1 style="margin:20px 0px 0px 40px">Nueva Venta</h1>
+<h1>Nueva Venta</h1>
 
-<mat-card style="margin:20px 40px 40px 40px">
+  <div class="contenedor-principal mat-elevation-z8">
 
-  <mat-card-content>
-    <form [formGroup]="formularioProductoVenta" (ngSubmit)="agregarProductoParaVenta()">
+    <div class="first-row-container">
+      <form [formGroup]="formularioProductoVenta" (ngSubmit)="agregarProductoParaVenta()" class="form-ventas">
 
+        <div class="first-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Producto</mat-label>
+            <input matInput type="text" placeholder="Buscar..." [matAutocomplete]="auto" formControlName="producto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="productoParaVenta($event)"
+              [displayWith]="mostrarProducto">
+              <mat-option *ngFor="let option of listaProductosFiltro" [value]="option">
+                {{option.nombre}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
 
-      <mat-form-field class="full-width" appearance="fill">
-        <mat-label>Producto</mat-label>
-        <input matInput type="text" placeholder="Buscar..." [matAutocomplete]="auto" formControlName="producto">
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="productoParaVenta($event)"
-          [displayWith]="mostrarProducto">
-          <mat-option *ngFor="let option of listaProductosFiltro" [value]="option">
-            {{option.nombre}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
+        <div class="second-container">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" formControlName="cantidad">
+          </mat-form-field>
 
-      <mat-form-field class="full-width" appearance="fill">
-        <mat-label>Cantidad</mat-label>
-        <input matInput type="number" formControlName="cantidad">
-      </mat-form-field>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Tipo de pago</mat-label>
+            <mat-select [(value)]="tipodePagoPorDefecto">
+              <mat-option value="Efectivo">Efectivo</mat-option>
+              <mat-option value="Tarjeta">Tarjeta</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
 
-      <div class="button-container">
-        <button mat-raised-button color="primary" [disabled]="formularioProductoVenta.invalid">
-          <mat-icon mat-list-icon>add</mat-icon> Agregar
-        </button>
-      </div>
+        <div class="third-container">
+          <div class="button-container">
+            <button mat-raised-button color="primary" [disabled]="formularioProductoVenta.invalid">
+              <mat-icon mat-list-icon>add</mat-icon> Agregar
+            </button>
+          </div>
 
-    </form>
+          <div class="button-container">
+            <button mat-raised-button color="accent">
+              Total: S/${{totalPagar.toFixed(2)}}
+            </button>
+          </div>
+        </div>
 
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Tipo de pago</mat-label>
-      <mat-select [(value)]="tipodePagoPorDefecto">
-        <mat-option value="Efectivo">Efectivo</mat-option>
-        <mat-option value="Tarjeta">Tarjeta</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <div class="button-container">
-      <button mat-raised-button color="accent">
-        Total: S/${{totalPagar.toFixed(2)}}
-      </button>
+      </form>
     </div>
 
-    <div class="mat-elevation-z2">
+    <div class="tabla-conteiner mat-elevation-z2">
 
       <table mat-table [dataSource]="datosDetalleVenta">
 
@@ -84,19 +90,11 @@
 
     </div>
 
-    <div>
-
-      <div></div>
-      <div>
-
-        <button mat-raised-button color="primary"
-          [disabled]="listaProductosParaVenta.length < 1 || bloquearBotonRegistrar" (click)="registrarVenta()">
-          <mat-icon>new_label</mat-icon> Registrar
-        </button>
-
-      </div>
+    <div class="registrar-container">
+      <button mat-raised-button color="primary"
+        [disabled]="listaProductosParaVenta.length < 1 || bloquearBotonRegistrar" (click)="registrarVenta()">
+        <mat-icon>new_label</mat-icon> Registrar
+      </button>
     </div>
 
-  </mat-card-content>
-
-</mat-card>
+  </div>

@@ -17,9 +17,9 @@
             <input matInput (keyup)="aplicarFiltroTabla($event)" #input>
         </mat-form-field>
 
-        <div class="mat-elevation-z2">
+        <div class="tabla-conteiner ">
 
-            <table mat-table [dataSource]="dataListaUsuarios">
+            <table mat-table [dataSource]="dataListaUsuarios" >
 
                 <ng-container matColumnDef="nombreCompleto">
                     <th mat-header-cell *matHeaderCellDef> Nombre </th>

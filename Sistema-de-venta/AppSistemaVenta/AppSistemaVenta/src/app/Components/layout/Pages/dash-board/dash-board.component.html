@@ -1,13 +1,12 @@
-<h1 style="margin:20px 0px 0px 40px"> Dashboard - resumen última semana</h1>
+<h1 style> Dashboard - resumen última semana</h1>
 
-<mat-card style="margin:20px 40px 40px 40px">
+<div class="card">
 
-    <mat-card-content>
+      <div class="container">
 
-        <mat-grid-list cols="3" rowHeight="100px">
 
-            <mat-grid-tile>
-                <mat-card class="card-info">
+            <div class="primer-card">
+                <mat-card >
                     <mat-card-header>
                         <div mat-card-avatar>
                             <mat-icon color="accent">payments</mat-icon>
@@ -16,10 +15,10 @@
                         <mat-card-subtitle>S/. {{totalIngresos}}</mat-card-subtitle>
                     </mat-card-header>
                 </mat-card>
-            </mat-grid-tile>
+              </div>
 
-            <mat-grid-tile>
-                <mat-card class="card-info">
+            <div class="segundo-card">
+                <mat-card  >
                     <mat-card-header>
                         <div mat-card-avatar>
                             <mat-icon color="warn">sell</mat-icon>
@@ -28,10 +27,10 @@
                         <mat-card-subtitle>{{totalVentas}}</mat-card-subtitle>
                     </mat-card-header>
                 </mat-card>
-            </mat-grid-tile>
+              </div>
 
-            <mat-grid-tile>
-                <mat-card class="card-info">
+              <div class="tercer-card">
+                <mat-card >
                     <mat-card-header>
                         <div mat-card-avatar>
                             <mat-icon color="primary">collections_bookmark</mat-icon>
@@ -40,9 +39,13 @@
                         <mat-card-subtitle>{{totalProductos}}</mat-card-subtitle>
                     </mat-card-header>
                 </mat-card>
-            </mat-grid-tile>
-        </mat-grid-list>
+              </div>
 
+      </div>
+
+    </div>
+
+    <div class="canvas">
         <mat-card style="margin-top: 15px;">
             <mat-card-content>
                 <div style="width: 100%;height: 400px;">
@@ -51,9 +54,5 @@
             </mat-card-content>
 
         </mat-card>
+      </div>
 
-
-    </mat-card-content>
-
-
-</mat-card>

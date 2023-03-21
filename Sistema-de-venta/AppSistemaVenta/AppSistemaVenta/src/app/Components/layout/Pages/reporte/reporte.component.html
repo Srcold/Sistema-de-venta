@@ -28,19 +28,21 @@
                     type="submit"
                     class="boton-buscar"
                     >
-                        <mat-icon>search</mat-icon> Buscar
+                        <mat-icon>search</mat-icon>
                 </button>
             </div>
         </form>
-
+        <div class="boton-excel">
         <button mat-raised-button color="warn"
             [disabled]="listaVentasReporte.length < 1"
             (click)="exportarExcel()"
             >
                 <mat-icon>feed</mat-icon> Exportar Excel
         </button>
+        </div>
 
-        <div class="mat-elevation-z2" style="margin-top: 15px;">
+
+        <div class="tabla-containter" >
 
             <table mat-table [dataSource]="dataVentaReporte">
 

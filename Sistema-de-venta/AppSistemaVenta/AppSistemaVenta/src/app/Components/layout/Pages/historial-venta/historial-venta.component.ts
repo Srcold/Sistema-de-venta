@@ -28,7 +28,7 @@ export const MY_DATA_FORMATS={
 @Component({
   selector: 'app-historial-venta',
   templateUrl: './historial-venta.component.html',
-  styleUrls: ['./historial-venta.component.css'],
+  styleUrls: ['./historial-venta.component.scss'],
   providers:[
     {provide:MAT_DATE_FORMATS, useValue:MY_DATA_FORMATS}
   ]

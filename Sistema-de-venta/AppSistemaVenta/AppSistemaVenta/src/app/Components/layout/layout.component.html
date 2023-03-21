@@ -39,7 +39,7 @@
 
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;"  >
+  <mat-sidenav #sidenav opened="true" mode="over" style="width: 200px;"  >
       <mat-nav-list>
 
           <mat-list-item *ngFor="let menu of listaMenus"   [routerLink]="menu.url">
@@ -60,7 +60,7 @@
   </mat-sidenav-content>
 
 </mat-sidenav-container>
-<mat-toolbar color="primary" > <span style="flex: 1 1 auto;"></span><h4 > Desarrollado Por martin zambruno</h4></mat-toolbar>
+<mat-toolbar color="primary" > <span style="position:fixed"></span><h4 > Desarrollado Por martin zambruno</h4></mat-toolbar>
 
 
 

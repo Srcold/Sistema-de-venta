@@ -1,17 +1,35 @@
 .campo-formulario{
   display: flex;
-  align-items: flex-start;
+
 }
 
 .boton-buscar{
-  width: 150px;
+  width: 10%;
+  height: 10%;
   margin-top: 15px;
 }
 
 mat-form-field{
   margin-right: 10px;
 }
+.boton-excel{
+  margin-top: 15px;
+}
 
+.tabla-containter{
+  width: 100% !important;
+  overflow: scroll;
+}
 table{
   width: 100%;
+  min-width: 900px;
+}
+
+@media screen and (max-width:800px){
+
+  .campo-formulario{
+    flex-direction: column;
+    width: 100%;
+  }
+
 }
